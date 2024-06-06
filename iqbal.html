@@ -361,29 +361,5 @@
         </div>
       </div>
     </div>
-    <script>
-      document.addEventListener("DOMContentLoaded", () => {
-        // Wait for a moment before attempting to request full screen
-        setTimeout(() => {
-          const requestFullscreen = () => {
-            const element = document.documentElement;
-            if (element.requestFullscreen) {
-              element.requestFullscreen();
-            } else if (element.mozRequestFullScreen) {
-              // Firefox
-              element.mozRequestFullScreen();
-            } else if (element.webkitRequestFullscreen) {
-              // Chrome, Safari, Opera
-              element.webkitRequestFullscreen();
-            } else if (element.msRequestFullscreen) {
-              // IE/Edge
-              element.msRequestFullscreen();
-            }
-          };
-
-          requestFullscreen();
-        }, 1000); // Adjust the delay as needed
-      });
-    </script>
   </body>
 </html>
